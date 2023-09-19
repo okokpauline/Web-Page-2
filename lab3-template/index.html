@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to My Web Page</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pauline Cenizal's Portfolio</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
 </head>
 <body>
-    <main>
-        <h1>Welcome to My Web Page</h1>
-        <div class="flex-container">
-            <div id="main-menu" class="flex-panel-left">
-                <div id="about-me"><a href="#aboutmeContent">About Me</a></div>
-                <div id="contact-us"><a href="#contactusContent">Contact Us</a></div>
-                <!-- TODO add more menu-->
-            </div>
-            <div  id="main-content" class="flex-panel-right">
-                <div id="about-me-content">About Me</div>
-                <div id="contact-us-content">Contact Us</div>
-                <!-- TODO add more content-->                
-            </div>
-        </div>
-    </main>    
+  <main>
+    <img class="backgroundImage" src="./images/Portfolio.svg" />
+    <header class="headerContainer">
+      <div class="socialsContainer"></div>
+      <h1  class="h1Text">Pauline</h1>
+      <nav class="navigationContainer">
+        <a href="./index.html" class="link active">Home</a>
+        <a href="./aboutMe.html" class="link">About</a>
+        <a href="./contactUsConfirm.html" class="link">Contact</a>
+      </nav>
+    </header>
+    <div class="sectionContainer"> 
+      <section class="mainContentContainer">
+        <div class="introText">Hello, I am Pauline, <br/> UI & Interactive Designer </div>
+        <p class="whoIAmText">
+          Dedicated to the art of creating visually stunning and user-centric <br/> digital experiences. 
+        </p>
+      </section>
+      <section class="profileHeadShotContainer">
+        <img src="images/profile.svg" />
+      </section>
+    </div>
+  </main>    
 </body>
 </html>
