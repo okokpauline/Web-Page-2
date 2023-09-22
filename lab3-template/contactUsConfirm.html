@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,26 @@
 
 <body>
     <main>
-        <h1>Thanks for your message!</h1>
-        <a id="back" href="index.html">Back</a>
+        <img class="backgroundImage" src="./images/Portfolio.svg" />
+        <header class="headerContainer">
+            <div class="socialsContainer"></div>
+            <h1 class="h1Text">Pauline</h1>
+            <nav class="navigationContainer">
+                <a href="./index.html" class="link">Home</a>
+                <a href="./aboutMe.html" class="link">About</a>
+                <a href="./contactMe" class="link active">Contact</a>
+            </nav>
+        </header>
+        
+        <div class="confirmationContainer">
+            <div class="confirmationMessage">
+                <h1>Thanks for your message!</h1>
+                <div> I will get in touch with you soon. </div>
+                <form class="back2Home" action="index.html">
+                    <button id="back home" type="submit">Back home</button>
+                </form>
+            </div>
+        </div>
     </main>
 </body>
 

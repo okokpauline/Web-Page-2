@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thanks for send us page</title>
+  <title>Contact Me</title>
   <link rel="stylesheet" href="main.css">
   <script src="main.js"></script>
 </head>
@@ -18,19 +18,33 @@
       <nav class="navigationContainer">
         <a href="./index.html" class="link">Home</a>
         <a href="./aboutMe.html" class="link">About</a>
-        <a href="./contactUsConfirm.html" class="link active">Contact</a>
+        <a href="./contactMe.html" class="link active">Contact</a>
       </nav>
     </header>
-    <header>
-      <h2 class="contactUstitle">Let's partner up!</h2>
-    </header>
-    <form class="contactUsform">
-      <input name="fname" type="text" class="feedback-input" placeholder="First Name*" />
-      <input name="lname" type="text" class="feedback-input" placeholder="Last Name*" />
-      <input name="email" type="text" class="feedback-input" placeholder="Email Address*" />
-      <textarea name="text" class="feedback-input" placeholder="Type Message.."></textarea>
-      <input type="submit" value="Send" />
-    </form>
+    <section>
+      <h2 class="contactMetitle">Let's partner up!</h2>
+      <form class="contactMeform" id="contactme_form" name="contactme_form" action="contactUsConfirm.html" method="get">
+
+        <label for="fname">First Name</label>
+        <span id="fname_error" class="mainerror">*</span><br>
+        <input type="text" class="feedback-input" id="fname" name="firstname" placeholder="Your name">
+        
+        <label for="lname">Last Name</label>
+        <span id="lname_error" class="mainerror">*</span><br>
+        <input type="text" class="feedback-input" id="lname" name="lastname" placeholder="Your last name">
+        
+        <label for="emailaddress">Email Address</label>
+        <span id="emailaddress_error" class="mainerror">*</span><br>
+        <input type="text" class="feedback-input" id="emailaddress" name="emailaddress" placeholder="Your email address">
+
+        <label for="message">Message</label>
+        <span id="message_error" class="mainerror">*</span><br>
+        <textarea id="message" class="feedback-input" name="message" placeholder="Type your message..."></textarea>
+        
+        <button id="send" type="submit">Send</button>
+        
+      </form>
+    </section>
   </main>
 </body>
 
