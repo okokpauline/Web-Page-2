@@ -1,7 +1,13 @@
 
 "use strict";
 
-const $ = selector => document.querySelector(selector);
+const $ = selector => {
+    console.log('selector', selector)
+    console.log('document.querySelector(selector)', selector)
+    return (
+        document.querySelector(selector)
+    )
+};
 
 /**
  * Show content
@@ -11,23 +17,50 @@ const $ = selector => document.querySelector(selector);
 const showContent = (_id, value) => {
     let x = $(_id);
     if (value === "show") {
-        x.style.display = "block";
+        x.style.display = "flex";
     } else if (value === "hide") {
         x.style.display = "none";
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {    
-    $("#about-me").addEventListener("click", (e) => {        
-        console.log("test");
-        showContent("#about-me-content", "show");
-        showContent("#contact-us-content", "hide");
+document.addEventListener("DOMContentLoaded", () => {   
+    console.log('DOMContentLoaded')
+    $("#home").addEventListener("click", (e) => {        
+        console.log("click on home");
+        showContent("#homeContent", "show");
+        showContent("#contactUsContent", "hide");
+        showContent("#aboutMeContent", "hide");
+        showContent("#contactUsConfirmContent", "hide");
     });
-    $("#contact-us").addEventListener("click", (e) => {        
-        console.log("test");
-        showContent("#about-me-content", "hide");
-        showContent("#contact-us-content", "show");
+    $("#aboutMe").addEventListener("click", (e) => {        
+        console.log("click on aboutMe");
+        showContent("#homeContent", "hide");
+        showContent("#aboutMeContent", "show");
+        showContent("#contactUsContent", "hide");
+        showContent("#contactUsConfirmContent", "hide");
     });
-    showContent("#about-me-content", "hide");
-    showContent("#contact-us-content", "hide");
+    $("#contactUs").addEventListener("click", (e) => {        
+        console.log("click on contactUs");
+        showContent("#homeContent", "hide");
+        showContent("#aboutMeContent", "hide");
+        showContent("#contactUsContent", "show");
+        showContent("#contactUsConfirmContent", "hide");
+    });
+    $("#submit").addEventListener("click", (e) => {        
+        console.log("click on submit");
+        showContent("#homeContent", "hide");
+        showContent("#aboutMeContent", "hide");
+        showContent("#contactUsContent", "hide");
+        showContent("#contactUsConfirmContent", "show");
+    });
+    $("#backHome").addEventListener("click", (e) => {        
+        console.log("click on backHome");
+        showContent("#homeContent", "show");
+        showContent("#aboutMeContent", "hide");
+        showContent("#contactUsContent", "hide");
+        showContent("#contactUsConfirmContent", "hide");
+    });
+    showContent("#aboutMeContent", "hide");
+    showContent("#contactUsContent", "hide");
+    showContent("#contactUsConfirmContent", "hide");
 });

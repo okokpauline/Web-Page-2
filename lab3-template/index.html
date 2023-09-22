@@ -16,12 +16,13 @@
       <div class="socialsContainer"></div>
       <h1 class="h1Text">Pauline</h1>
       <nav class="navigationContainer">
-        <a href="./index.html" class="link active">Home</a>
-        <a href="./aboutMe.html" class="link">About</a>
-        <a href="./contactMe.html" class="link">Contact</a>
+        <a id="home" href="#home" class="link active">Home</a>
+        <a id="aboutMe" href="#aboutMe" class="link">About</a>
+        <a id="contactUs" href="#contactUs" class="link">Contact</a>
       </nav>
     </header>
-    <div class="sectionContainer">
+
+    <div id="homeContent" class="sectionContainer">
       <section class="mainContentContainer">
         <div class="introText">Hello, I am Pauline, <br /> UI & Interactive Designer </div>
         <p class="whoIAmText">
@@ -31,6 +32,75 @@
       <section class="profileHeadShotContainer">
         <img src="images/profile.svg" />
       </section>
+    </div>
+    
+    <div id="aboutMeContent" class="contentContainer">
+      <div class="abouMeParagraphsContainer">
+        <div class="hello-imPauline">
+          Hello! I'm Pauline Cenizal, <br /> UI & Interactive Designer.
+        </div>
+        <div class="aboutMeparagraph">
+          My journey in the world of design has been an exciting exploration of creativity, <br />
+          aesthetics, and empathy. With a background in customer service, I have honed <br />
+          the ability to empathize deeply with user needs & frustrations, allowing me <br />
+          to design solutions that truly resonate.
+        </div>
+        <div class="aboutMe2ndparagraph">
+          I'm committed to creating visually appealing, user-centric, and interactive design <br />
+          that provides meaningful interactions that enhance the user journey. <br />
+          I'd love to collaborate with you on your next project. <br />
+          Let's embark on a design journey together & make technology <br />
+          more human-centric & visually captivating.
+        </div>
+        <button type="submit" class="contactMeButton" onclick="">Contact Me</button>
+      </div>
+      <img src="images/profile.svg" />
+      </section>
+    </div>
+
+    <div id="contactUsContent">
+      <form class="contactMeform" id="contactme_form" name="contactme_form" action="contactUsConfirm.html" method="get">
+        <h2 class="contactMetitle">Let's partner up!</h2>
+
+        <label for="fname">First Name</label>
+        <span id="fname_error" class="mainerror">*</span><br>
+        <input type="text" class="feedback-input" id="fname" name="firstname" placeholder="Your name">
+        
+        <label for="lname">Last Name</label>
+        <span id="lname_error" class="mainerror">*</span><br>
+        <input type="text" class="feedback-input" id="lname" name="lastname" placeholder="Your last name">
+        
+        <label for="emailaddress">Email Address</label>
+        <span id="emailaddress_error" class="mainerror">*</span><br>
+        <input type="text" class="feedback-input" id="emailaddress" name="emailaddress" placeholder="Your email address">
+
+        <label for="message">Message</label>
+        <span id="message_error" class="mainerror">*</span><br>
+        <textarea id="message" class="feedback-input" name="message" placeholder="Type your message..."></textarea>
+        
+        <button id="submit" type="submit">Send</button>
+        
+      </form>
+    </div>
+
+    <div id="contactUsConfirmContent">
+      <img class="backgroundImage" src="./images/Portfolio.svg" />
+      <header class="headerContainer">
+        <div class="socialsContainer"></div>
+        <h1 class="h1Text">Pauline</h1>
+        <nav class="navigationContainer">
+          <a href="./index.html" class="link">Home</a>
+          <a href="./aboutMe.html" class="link">About</a>
+          <a href="./contactMe" class="link active">Contact</a>
+        </nav>
+      </header>
+      <div class="confirmationContainer">
+        <div class="confirmationMessage">
+          <h1>Thanks for your message!</h1>
+          <div> I will get in touch with you soon. </div>
+          <button id="backHome" type="submit">Back home</button>
+        </div>
+      </div>
     </div>
   </main>
 </body>
